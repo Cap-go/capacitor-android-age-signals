@@ -1,6 +1,7 @@
 package app.capgo.androidagesignals.classes;
 
 public final class CustomExceptions {
+
     private CustomExceptions() {}
 
     public static final CustomException API_NOT_AVAILABLE = new CustomException(
@@ -32,12 +33,6 @@ public final class CustomExceptions {
         "CLIENT_TRANSIENT_ERROR",
         "A transient error occurred on the device. Retry the request."
     );
-    public static final CustomException APP_NOT_OWNED = new CustomException(
-        "APP_NOT_OWNED",
-        "The app was not installed from Google Play."
-    );
-    public static final CustomException INTERNAL_ERROR = new CustomException(
-        "INTERNAL_ERROR",
-        "An unknown internal error occurred."
-    );
+    public static final CustomException APP_NOT_OWNED = new CustomException("APP_NOT_OWNED", "The app was not installed from Google Play.");
+    public static final CustomException INTERNAL_ERROR = new CustomException("INTERNAL_ERROR", "An unknown internal error occurred.");
 }
