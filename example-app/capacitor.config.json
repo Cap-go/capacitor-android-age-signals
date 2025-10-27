@@ -1,0 +1,10 @@
+{
+  "appId": "app.capgo.androidagesignals.example",
+  "appName": "Age Signals Example",
+  "webDir": "dist",
+  "plugins": {
+    "SplashScreen": {
+      "launchAutoHide": false
+    }
+  }
+}

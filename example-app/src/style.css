@@ -1,0 +1,149 @@
+:root {
+  font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  line-height: 1.5;
+  color: #101828;
+  background-color: #f9fafb;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+main {
+  width: min(720px, 100vw - 2rem);
+  background: #ffffff;
+  border-radius: 18px;
+  box-shadow: 0 22px 45px rgba(15, 23, 42, 0.12);
+  padding: 2.5rem;
+}
+
+h1 {
+  margin: 0 0 0.5rem;
+  font-size: clamp(2rem, 4vw, 2.5rem);
+  color: #0f172a;
+}
+
+p.lead {
+  margin: 0 0 1.5rem;
+  color: #475467;
+}
+
+.controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin: 1.5rem 0;
+}
+
+button {
+  background: #2563eb;
+  border: none;
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 12px;
+  padding: 0.8rem 1.4rem;
+  cursor: pointer;
+  transition: transform 120ms ease, box-shadow 120ms ease, background 120ms ease;
+  box-shadow: 0 10px 20px rgba(37, 99, 235, 0.25);
+}
+
+button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 16px 30px rgba(37, 99, 235, 0.25);
+  background: #1d4ed8;
+}
+
+button.secondary {
+  background: #e0e7ff;
+  color: #1d4ed8;
+  box-shadow: none;
+}
+
+button.secondary:hover {
+  background: #c7d2fe;
+  box-shadow: none;
+}
+
+.status-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.status-card {
+  border: 1px solid #e4e7ec;
+  border-radius: 14px;
+  padding: 1.25rem;
+  background: linear-gradient(180deg, rgba(226, 232, 240, 0.2), rgba(241, 245, 249, 0.05));
+}
+
+.status-card h2 {
+  margin: 0 0 0.75rem;
+  font-size: 1rem;
+  color: #1f2a37;
+}
+
+.status-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.4rem 0.8rem;
+  border-radius: 999px;
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.status-pill.verified {
+  background: rgba(34, 197, 94, 0.15);
+  color: #15803d;
+}
+
+.status-pill.supervised {
+  background: rgba(14, 165, 233, 0.16);
+  color: #0369a1;
+}
+
+.status-pill.pending {
+  background: rgba(249, 115, 22, 0.18);
+  color: #b45309;
+}
+
+.status-pill.error,
+.status-pill.unknown {
+  background: rgba(244, 63, 94, 0.16);
+  color: #be123c;
+}
+
+.details {
+  border: 1px solid #e4e7ec;
+  border-radius: 14px;
+  padding: 1.5rem;
+  background: #f8fafc;
+  font-family: 'JetBrains Mono', 'Fira Code', 'SFMono-Regular', Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
+  font-size: 0.9rem;
+  color: #0f172a;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+.details.empty {
+  color: #8795a1;
+}
+
+.timestamp {
+  color: #475467;
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+.error {
+  color: #dc2626;
+  margin-top: 1rem;
+  font-weight: 600;
+}

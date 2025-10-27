@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@capgo/capacitor-android-age-signals Example</title>
+    <link rel="stylesheet" href="/src/style.css" />
+  </head>
+  <body>
+    <main>
+      <h1>@capgo/capacitor-android-age-signals</h1>
+      <p class="lead">
+        Fetch Google Play Age Signals for the current user. Link this example to a local build of the plugin to test the native runtime.
+      </p>
+
+      <section class="status-grid">
+        <div class="status-card">
+          <h2>User Status</h2>
+          <span id="status-pill" class="status-pill unknown">Unknown</span>
+        </div>
+        <div class="status-card">
+          <h2>Age Range</h2>
+          <p class="timestamp" id="age-range">No data yet</p>
+        </div>
+        <div class="status-card">
+          <h2>Most Recent Approval</h2>
+          <p class="timestamp" id="approval-date">No approval timestamp</p>
+        </div>
+      </section>
+
+      <section class="controls">
+        <button id="check-age-signals">Check Age Signals</button>
+        <button id="clear" class="secondary">Clear</button>
+      </section>
+
+      <section>
+        <p class="timestamp" id="last-checked">Not checked yet</p>
+        <pre id="result" class="details empty">Run a check to view the raw payload.</pre>
+        <p id="error" class="error" hidden></p>
+      </section>
+    </main>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
