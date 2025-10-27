@@ -1,14 +1,14 @@
 package app.capgo.androidagesignals;
 
 import androidx.annotation.NonNull;
+import app.capgo.androidagesignals.classes.CustomExceptions;
+import app.capgo.androidagesignals.classes.results.CheckAgeSignalsResult;
+import app.capgo.androidagesignals.interfaces.NonEmptyResultCallback;
 import com.google.android.gms.tasks.Task;
 import com.google.android.play.agesignals.AgeSignalsManager;
 import com.google.android.play.agesignals.AgeSignalsManagerFactory;
 import com.google.android.play.agesignals.AgeSignalsRequest;
 import com.google.android.play.agesignals.AgeSignalsResult;
-import app.capgo.androidagesignals.classes.CustomExceptions;
-import app.capgo.androidagesignals.classes.results.CheckAgeSignalsResult;
-import app.capgo.androidagesignals.interfaces.NonEmptyResultCallback;
 
 public class AgeSignals {
 
@@ -24,7 +24,7 @@ public class AgeSignals {
         AgeSignalsRequest request = AgeSignalsRequest.builder().build();
 
         Task<AgeSignalsResult> task = manager.checkAgeSignals(request);
-        task.addOnSuccessListener(ageSignalsResult -> {
+        task.addOnSuccessListener((ageSignalsResult) -> {
             try {
                 CheckAgeSignalsResult result = new CheckAgeSignalsResult(ageSignalsResult);
                 callback.success(result);
@@ -32,7 +32,7 @@ public class AgeSignals {
                 callback.error(exception);
             }
         });
-        task.addOnFailureListener(exception -> {
+        task.addOnFailureListener((exception) -> {
             Exception mapped = mapErrorToException(exception);
             callback.error(mapped);
         });

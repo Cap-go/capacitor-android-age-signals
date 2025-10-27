@@ -4,6 +4,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
 public class CustomException extends Exception {
+
     @Nullable
     private final String code;
 
