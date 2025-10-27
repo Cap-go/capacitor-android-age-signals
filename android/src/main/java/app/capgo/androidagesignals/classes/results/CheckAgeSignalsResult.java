@@ -2,12 +2,13 @@ package app.capgo.androidagesignals.classes.results;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import com.getcapacitor.JSObject;
-import com.google.android.play.agesignals.AgeSignalsResult;
 import app.capgo.androidagesignals.enums.UserStatus;
 import app.capgo.androidagesignals.interfaces.Result;
+import com.getcapacitor.JSObject;
+import com.google.android.play.agesignals.AgeSignalsResult;
 
 public class CheckAgeSignalsResult implements Result {
+
     @NonNull
     private final UserStatus userStatus;
 
@@ -27,8 +28,9 @@ public class CheckAgeSignalsResult implements Result {
         this.userStatus = mapUserStatus(ageSignalsResult.userStatus().toString());
         this.ageLower = ageSignalsResult.ageLower();
         this.ageUpper = ageSignalsResult.ageUpper();
-        this.mostRecentApprovalDate =
-            ageSignalsResult.mostRecentApprovalDate() != null ? ageSignalsResult.mostRecentApprovalDate().toString() : null;
+        this.mostRecentApprovalDate = ageSignalsResult.mostRecentApprovalDate() != null
+            ? ageSignalsResult.mostRecentApprovalDate().toString()
+            : null;
         this.installId = ageSignalsResult.installId();
     }
 

@@ -2,18 +2,20 @@ package app.capgo.androidagesignals;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import app.capgo.androidagesignals.classes.results.CheckAgeSignalsResult;
+import app.capgo.androidagesignals.interfaces.NonEmptyResultCallback;
+import app.capgo.androidagesignals.interfaces.Result;
 import com.getcapacitor.JSObject;
 import com.getcapacitor.Logger;
 import com.getcapacitor.Plugin;
 import com.getcapacitor.PluginCall;
 import com.getcapacitor.PluginMethod;
 import com.getcapacitor.annotation.CapacitorPlugin;
-import app.capgo.androidagesignals.classes.results.CheckAgeSignalsResult;
-import app.capgo.androidagesignals.interfaces.NonEmptyResultCallback;
-import app.capgo.androidagesignals.interfaces.Result;
 
 @CapacitorPlugin(name = "AgeSignals")
 public class AgeSignalsPlugin extends Plugin {
+
+    private final String PLUGIN_VERSION = "7.0.0";
     public static final String TAG = "AgeSignals";
     private static final String ERROR_UNKNOWN = "An unknown error occurred.";
 
@@ -59,7 +61,8 @@ public class AgeSignalsPlugin extends Plugin {
 
         if (exception instanceof app.capgo.androidagesignals.classes.CustomException) {
             JSObject error = new JSObject();
-            app.capgo.androidagesignals.classes.CustomException customException = (app.capgo.androidagesignals.classes.CustomException) exception;
+            app.capgo.androidagesignals.classes.CustomException customException =
+                (app.capgo.androidagesignals.classes.CustomException) exception;
             error.put("code", customException.getCode());
             error.put("message", message);
             call.reject(message, customException.getCode(), error);
@@ -73,6 +76,17 @@ public class AgeSignalsPlugin extends Plugin {
             call.resolve();
         } else {
             call.resolve(result.toJSObject());
+        }
+    }
+
+    @PluginMethod
+    public void getPluginVersion(final PluginCall call) {
+        try {
+            final JSObject ret = new JSObject();
+            ret.put("version", this.PLUGIN_VERSION);
+            call.resolve(ret);
+        } catch (final Exception e) {
+            call.reject("Could not get plugin version", e);
         }
     }
 }
