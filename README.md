@@ -2,8 +2,8 @@
 <a href="https://capgo.app/"><img src="https://raw.githubusercontent.com/Cap-go/capgo/main/assets/capgo_banner.png" alt="Capgo - Instant updates for Capacitor"/></a>
 
 <div align="center">
-  <h2><a href="https://capgo.app/?ref=plugin">➡️ Ship Instant Updates with Capgo</a></h2>
-  <h2><a href="https://capgo.app/consulting/?ref=plugin">Missing a feature? We’ll build the plugin for you 💪</a></h2>
+  <h2><a href="https://capgo.app/?ref=plugin_android_age_signals">➡️ Ship Instant Updates with Capgo</a></h2>
+  <h2><a href="https://capgo.app/consulting/?ref=plugin_android_age_signals">Missing a feature? We’ll build the plugin for you 💪</a></h2>
 </div>
 
 Capacitor wrapper for the Google Play Age Signals API. Detect supervised accounts, guardian approvals, and verified users directly from your app (Android only).
