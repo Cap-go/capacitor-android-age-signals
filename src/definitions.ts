@@ -14,6 +14,14 @@ export interface AgeSignalsPlugin {
    * @since 0.0.1
    */
   checkAgeSignals(): Promise<CheckAgeSignalsResult>;
+
+  /**
+   * Get the native Capacitor plugin version.
+   *
+   * @returns Promise that resolves with the plugin version
+   * @since 1.0.0
+   */
+  getPluginVersion(): Promise<{ version: string }>;
 }
 
 /**
