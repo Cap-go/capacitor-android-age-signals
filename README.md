@@ -10,7 +10,7 @@ Capacitor wrapper for the Google Play Age Signals API. Detect supervised account
 
 ## Why Android Age Signals?
 
-The only **free** Capacitor plugin for Google Play's Age Signals API (paid alternatives exist). Implement COPPA and teen safety compliance with:
+The only **free** Capacitor plugin for Google Play's Age Signals API. Implement COPPA and teen safety compliance with:
 
 - **Supervised account detection** - Identify users with parental controls
 - **Age verification** - Detect 18+ verified users
