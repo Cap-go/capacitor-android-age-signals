@@ -43,6 +43,7 @@ if (result.userStatus === UserStatus.Supervised) {
 <docgen-index>
 
 * [`checkAgeSignals()`](#checkagesignals)
+* [`getPluginVersion()`](#getpluginversion)
 * [Interfaces](#interfaces)
 * [Enums](#enums)
 
@@ -66,6 +67,21 @@ Only available on Android devices with Google Play installed.
 **Returns:** <code>Promise&lt;<a href="#checkagesignalsresult">CheckAgeSignalsResult</a>&gt;</code>
 
 **Since:** 0.0.1
+
+--------------------
+
+
+### getPluginVersion()
+
+```typescript
+getPluginVersion() => Promise<{ version: string; }>
+```
+
+Get the native Capacitor plugin version.
+
+**Returns:** <code>Promise&lt;{ version: string; }&gt;</code>
+
+**Since:** 1.0.0
 
 --------------------
 
