@@ -15,7 +15,7 @@ import com.getcapacitor.annotation.CapacitorPlugin;
 @CapacitorPlugin(name = "AgeSignals")
 public class AgeSignalsPlugin extends Plugin {
 
-    private final String PLUGIN_VERSION = "7.0.0";
+    private final String pluginVersion = "7.0.0";
     public static final String TAG = "AgeSignals";
     private static final String ERROR_UNKNOWN = "An unknown error occurred.";
 
@@ -83,7 +83,7 @@ public class AgeSignalsPlugin extends Plugin {
     public void getPluginVersion(final PluginCall call) {
         try {
             final JSObject ret = new JSObject();
-            ret.put("version", this.PLUGIN_VERSION);
+            ret.put("version", this.pluginVersion);
             call.resolve(ret);
         } catch (final Exception e) {
             call.reject("Could not get plugin version", e);
