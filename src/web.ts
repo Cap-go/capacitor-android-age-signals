@@ -6,4 +6,7 @@ export class AgeSignalsWeb extends WebPlugin implements AgeSignalsPlugin {
   async checkAgeSignals(): Promise<CheckAgeSignalsResult> {
     throw this.unimplemented('checkAgeSignals is only available on Android.');
   }
+  async getPluginVersion(): Promise<{ version: string }> {
+    return { version: 'web' };
+  }
 }
