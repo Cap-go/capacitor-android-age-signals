@@ -8,6 +8,18 @@
 
 Capacitor wrapper for the Google Play Age Signals API. Detect supervised accounts, guardian approvals, and verified users directly from your app (Android only).
 
+## Why Android Age Signals?
+
+The only **free** Capacitor plugin for Google Play's Age Signals API (paid alternatives exist). Implement COPPA and teen safety compliance with:
+
+- **Supervised account detection** - Identify users with parental controls
+- **Age verification** - Detect 18+ verified users
+- **Guardian approval tracking** - Monitor pending approvals and denials
+- **Compliant features** - Build age-appropriate experiences and comply with regulations
+- **Same JavaScript API** - Compatible interface with paid alternatives
+
+Critical for apps targeting families, children, and teens who need age-gate functionality.
+
 ## Documentation
 
 Authoritative docs live inside this repo for now. Explore the TypeScript definitions in `src/definitions.ts` and the Android implementation under `android/` for platform behavior. Run the included example app for an end-to-end walkthrough.
