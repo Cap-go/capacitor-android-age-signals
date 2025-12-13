@@ -9,6 +9,8 @@
   "files": [
     "android/src/main/",
     "android/build.gradle",
+    "ios/Sources/",
+    "ios/Tests/",
     "dist/",
     "src/",
     "README.md"
@@ -30,8 +32,9 @@
     "capgo"
   ],
   "scripts": {
-    "verify": "bun run verify:android && bun run verify:web",
+    "verify": "bun run verify:android && bun run verify:ios && bun run verify:web",
     "verify:android": "cd android && ./gradlew clean build test && cd ..",
+    "verify:ios": "cd ios && swift build && cd ..",
     "verify:web": "bun run build",
     "lint": "bun run eslint && bun run prettier -- --check",
     "fmt": "bun run eslint -- --fix && bun run prettier -- --write",
@@ -70,6 +73,9 @@
   "capacitor": {
     "android": {
       "src": "android"
+    },
+    "ios": {
+      "src": "ios"
     }
   }
 }
