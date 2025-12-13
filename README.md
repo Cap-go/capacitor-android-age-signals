@@ -7,6 +7,7 @@
 </div>
 
 Capacitor wrapper for the Google Play Age Signals API. Detect supervised accounts, guardian approvals, and verified users directly from your app (Android only).
+Compatible with Capacitor 8/7
 
 ## Why Android Age Signals?
 
