@@ -1,6 +1,6 @@
 {
   "name": "@capgo/capacitor-android-age-signals",
-  "version": "8.1.2",
+  "version": "8.1.3",
   "description": "Capacitor plugin that exposes Google Play Age Signals to your app.",
   "main": "dist/plugin.cjs.js",
   "module": "dist/esm/index.js",
