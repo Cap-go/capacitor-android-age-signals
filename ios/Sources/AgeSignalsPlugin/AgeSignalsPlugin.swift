@@ -7,7 +7,7 @@ import Capacitor
  */
 @objc(AgeSignalsPlugin)
 public class AgeSignalsPlugin: CAPPlugin, CAPBridgedPlugin {
-    private let pluginVersion: String = "8.1.3"
+    private let pluginVersion: String = "8.1.4"
     public let identifier = "AgeSignalsPlugin"
     public let jsName = "AgeSignals"
     public let pluginMethods: [CAPPluginMethod] = [
