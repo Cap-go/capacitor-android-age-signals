@@ -25,6 +25,17 @@ Critical for apps targeting families, children, and teens who need age-gate func
 
 Authoritative docs live inside this repo for now. Explore the TypeScript definitions in `src/definitions.ts` and the Android implementation under `android/` for platform behavior. Run the included example app for an end-to-end walkthrough.
 
+## Compatibility
+
+| Plugin version | Capacitor compatibility | Maintained |
+| -------------- | ----------------------- | ---------- |
+| v8.\*.\*       | v8.\*.\*                | ✅          |
+| v7.\*.\*       | v7.\*.\*                | On demand   |
+| v6.\*.\*       | v6.\*.\*                | ❌          |
+| v5.\*.\*       | v5.\*.\*                | ❌          |
+
+> **Note:** The major version of this plugin follows the major version of Capacitor. Use the version that matches your Capacitor installation (e.g., plugin v8 for Capacitor 8). Only the latest major version is actively maintained.
+
 ## Install
 
 ```bash
