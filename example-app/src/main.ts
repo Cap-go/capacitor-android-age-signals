@@ -1,3 +1,5 @@
+import { CapacitorUpdater } from '@capgo/capacitor-updater';
+import { Capacitor } from '@capacitor/core';
 import './style.css';
 import { AgeSignals, ErrorCode, UserStatus } from '@capgo/capacitor-android-age-signals';
 
@@ -87,3 +89,9 @@ resetUI();
 
 checkButton?.addEventListener('click', handleCheck);
 clearButton?.addEventListener('click', resetUI);
+
+if (Capacitor.isNativePlatform()) {
+  CapacitorUpdater.notifyAppReady().catch((error) => {
+    console.error('Capgo notifyAppReady failed', error);
+  });
+}
