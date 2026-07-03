@@ -4,7 +4,7 @@ import pkg from './package.json';
 
 const config: CapacitorConfig = {
   appId: 'app.capgo.androidagesignals.example',
-  appName: 'Age Signals Example',
+  appName: '@capgo/capacitor-android-age-signals',
   webDir: 'dist',
   plugins: {
     SplashScreen: {
