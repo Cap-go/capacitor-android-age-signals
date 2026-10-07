@@ -1,13 +1,27 @@
 # @capgo/capacitor-android-age-signals
-<a href="https://capgo.app/"><img src="https://capgo.app/readme-banner.svg?repo=Cap-go/capacitor-android-age-signals" alt="Capgo - Instant updates for Capacitor" /></a>
+
+Read Google Play Age Signals from your Capacitor app to detect supervised accounts, guardian approvals and verified users. A small Android-only bridge for age assurance flows.
+
+<a href="https://capgo.app/?ref=plugin_android_age_signals"><img src="https://capgo.app/readme-banner.svg?repo=Cap-go/capacitor-android-age-signals" alt="Capgo - Instant updates for Capacitor" /></a>
 
 <div align="center">
-  <h2><a href="https://capgo.app/?ref=plugin_android_age_signals">➡️ Ship Instant Updates with Capgo</a></h2>
-  <h2><a href="https://capgo.app/consulting/?ref=plugin_android_age_signals">Missing a feature? We’ll build the plugin for you 💪</a></h2>
+  <p><b>Capgo</b>: open-source live updates for Ionic and Capacitor apps. Ship OTA fixes and features instantly, without waiting for app store review.</p>
+  <h2><a href="https://capgo.app/register/?ref=plugin_android_age_signals">➡️ Get started for free</a></h2>
+  <p>14-day unlimited free trial. No credit card required</p>
+  <p><a href="https://capgo.app/consulting/?ref=plugin_android_age_signals">Missing a feature? We'll build the plugin for you 💪</a></p>
 </div>
 
-Capacitor wrapper for the Google Play Age Signals API. Detect supervised accounts, guardian approvals, and verified users directly from your app (Android only).
-Compatible with Capacitor 8/7
+<p align="center">
+  <img src="https://raw.githubusercontent.com/Cap-go/capacitor-android-age-signals/main/assets/github-social-preview.png" alt="@capgo/capacitor-android-age-signals for Capacitor apps" width="300" />
+</p>
+
+## Key features
+
+- **One call**: `checkAgeSignals()` requests the current Play Age Signals for the active user.
+- **Supervised accounts**: tells you when the user is on a supervised account and whether a guardian approved.
+- **Verified users**: reports when Google Play verified the user's age.
+- **Official library**: uses the Google Play `age-signals` library.
+- **Platforms**: Android. Android only. iOS and web are not supported (see capacitor-age-range for both platforms).
 
 ## Why Android Age Signals?
 
